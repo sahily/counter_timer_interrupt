@@ -1,5 +1,5 @@
 # counter_timer_interrupt
-Interrupt based counter using one timer for the display and another timer for increments
+Interrupt based counter using one timer for the display and another timer for increments. Increments once per second.
 
 ## Getting Started
 
