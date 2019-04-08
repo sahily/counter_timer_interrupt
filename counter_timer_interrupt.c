@@ -54,7 +54,7 @@ unsigned int digitSelector[4][4] = {
                                    };                 
 
 unsigned int x;         //used with digitSelctor variable in display function to select digit
-unsigned int y;         //used for the timer 1 overflow iterations
+unsigned int y;         //used in timer 1 interrupt to count iterations of timer overflow before incrementing count
 
 
 
@@ -89,7 +89,7 @@ void init(void)
  * Function: configureTimer0
  * -----------------
  *
- * sets up Timer 0 and enables timer interrupt
+ * sets up Timer 0 and enables timer 0 interrupt
  *
  */
 
@@ -105,7 +105,7 @@ void configureTimer0(void)
  * Function: configureTimer1
  * -----------------
  *
- * sets up Timer 1 and enables timer interrupt
+ * sets up Timer 1 and enables timer 1 interrupt
  *
  */
 
