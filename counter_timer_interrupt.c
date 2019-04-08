@@ -3,7 +3,8 @@
  *
  * Created: 4/8/2019 3:17:32 PM
  * Author : Sahil S. Mahajan
- * Description: Interrupt based counter using one timer for the display and another timer for increments. Increments once per second.
+ * Description: Interrupt based counter using one timer for the display and another timer for increments. 
+ *					Increments once per second.
  *
  */
 
