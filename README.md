@@ -21,7 +21,7 @@ Interrupt based counter using one timer for the display and another timer for in
 
 ### Example
 
-Count increments once per second starting from 0000. In this example the current count is 462.
+Count increments once per second starting from 0000. In this example the current count is 81.
 
 <img src="counter_timer_interrupt_pic.jpg" width="400">
 
