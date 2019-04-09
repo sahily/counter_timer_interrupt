@@ -172,6 +172,7 @@ void resetTimer1(void)
 
 void display(void)
 {
+    P0 = 0x00;
 
     sl1 = digitSelector[x][0];
     sl2 = digitSelector[x][1];
