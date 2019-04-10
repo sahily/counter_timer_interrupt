@@ -159,7 +159,7 @@ void resetTimer1(void)
 {
     TH1 = 0x4C;
     TL1 = 0x26;         //set to 50 milliseconds  
-}                       // <----- 37 machine cycles from interrupt vector to this line
+}                       // <----- 38 machine cycles from interrupt vector to this line
 
 
 /* -----------------
