@@ -143,8 +143,8 @@ void enableInterrupt(void)
 
 void resetTimer0(void)
 {
-    TH0 = 0xEF;
-    TL0 = 0xCD;         //set to 4.5 milliseconds  
+    TH0 = 0xFC;
+    TL0 = 0x66;         //set to 1 millisecond  
 }
 
 
@@ -175,17 +175,17 @@ void display(void)
 {
     P0 = 0x00;
 
-    sl1 = digitSelector[x][0];
-    sl2 = digitSelector[x][1];
-    sl3 = digitSelector[x][2];
-    sl4 = digitSelector[x][3];   /* Digit is selected when its pin is reset.        */ 
+    sl1 = digitSelector[x/4][0];
+    sl2 = digitSelector[x/4][1];
+    sl3 = digitSelector[x/4][2];
+    sl4 = digitSelector[x/4][3];   /* Digit is selected when its pin is reset.        */ 
                                  /* Only one of these is selected in each iteration */
 
-    P0 = numberList[numbersToDisplay[x]-'0'];
+    P0 = numberList[numbersToDisplay[x/4]-'0'];
 
     x++;
 
-    if(x == 4)
+    if(x == 16)
     {
         x = 0;
     }
