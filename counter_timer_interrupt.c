@@ -73,7 +73,7 @@ void main()
  * Function: init
  * -----------------
  *
- * clears display, initializes variables, and configures timer mode
+ * clears display, initializes variables, configures timer mode, gives priority to timer for timing accuracy
  *
  */
 
@@ -81,7 +81,8 @@ void init(void)
 {
     P0 = 0x00;      //clear display
     x = 0;
-    TMOD = 0x11;    //use Timer 0 in 16-bit Timer operating mode and Timer 1 in 16-bit Timer operating mode  
+    TMOD = 0x11;    //use Timer 0 in 16-bit Timer operating mode and Timer 1 in 16-bit Timer operating mode 
+    PT1 = 1;        //give priority to timer 1, since this timer is responsible for accurate timing 
 }
 
 
@@ -158,8 +159,8 @@ void resetTimer0(void)
 void resetTimer1(void)
 {
     TH1 = 0x4C;
-    TL1 = 0x26;         //set to 50 milliseconds  
-}                       // <----- 38 machine cycles from interrupt vector to this line
+    TL1 = 0x24;         //set to 50 milliseconds  
+}                       // <----- 36 machine cycles from interrupt vector to this line
 
 
 /* -----------------
