@@ -179,7 +179,7 @@ void display(void)
     sl2 = digitSelector[x/4][1];
     sl3 = digitSelector[x/4][2];
     sl4 = digitSelector[x/4][3];   /* Digit is selected when its pin is reset.        */ 
-                                 /* Only one of these is selected in each iteration */
+                                   /* Only one of these is selected in each iteration */
 
     P0 = numberList[numbersToDisplay[x/4]-'0'];
 
