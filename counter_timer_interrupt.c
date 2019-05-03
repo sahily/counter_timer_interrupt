@@ -25,10 +25,10 @@ void resetToZero(void);
 
 #define TRIGGER 20          //the number of timer overflow iterations before incrementing count
 
-sbit sl1 = P2^3;
-sbit sl2 = P2^2;
-sbit sl3 = P2^1;
-sbit sl4 = P2^0;
+sbit sl1 = P2^7;
+sbit sl2 = P2^6;
+sbit sl3 = P2^5;
+sbit sl4 = P2^4;
 
 unsigned int numberList[10] = {
                                   0xFC,   //0         
